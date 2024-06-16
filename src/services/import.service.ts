@@ -80,7 +80,6 @@ export class ImportService {
       await CaseModel.create(caseData);
     } catch (error) {
       Logger.error(`Error processing row: ${error}`);
-      // You might handle the error differently based on your application's needs
       throw error;
     }
   }
