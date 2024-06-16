@@ -37,7 +37,7 @@ const importController = new ImportController();
 schedule.scheduleJob("0 10,17 * * *", async () => {
   Logger.info("Running scheduled data import job");
   try {
-    await importController.importData(); // Assuming no req/res needed for scheduled job
+    await importController.importData();
     Logger.info("Scheduled data import job completed successfully");
   } catch (error) {
     Logger.error("Scheduled job failed", error);
